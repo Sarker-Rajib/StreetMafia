@@ -35,10 +35,86 @@
         }
 
         .contents {
+            margin-top: -10px;
             min-width: 800px;
             max-width: 800px;
             background: #ffffff;
-            padding: 5px;
+            padding: 10px;
+            background: url(../images/content-achtergrond-light.png);
+
+            .shade {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .nav-bar-menu {
+                position: relative;
+                z-index: 999;
+
+                ul {
+                    padding: 0;
+                }
+
+                .menu-wrap {
+                    display: flex;
+
+                    .nav-pill {
+                        position: relative;
+
+                        .nav-btn {
+                            font-weight: bold;
+                            color: #000;
+                            text-decoration: none;
+                            display: block;
+                            padding: 10px 16px;
+                            margin: 0;
+                            border-radius: 0.7em;
+
+                        }
+
+                        ul {
+                            display: none;
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                        }
+
+                        &.active {
+                            .nav-btn {
+                                background-color: #1f1f1f;
+                                color: #FFF;
+                                border-top: solid 1px #f8f8f8;
+                                text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+                            }
+                        }
+
+                        &:hover {
+                            .nav-btn {
+                                background-color: #1f1f1f;
+                                color: #FFF;
+                                border-top: solid 1px #f8f8f8;
+                                text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+                            }
+
+                            ul {
+                                display: block;
+                            }
+                        }
+                    }
+
+
+
+                    a {
+                        font-size: 11px;
+                    }
+
+
+
+                }
+
+
+            }
         }
     }
 }
