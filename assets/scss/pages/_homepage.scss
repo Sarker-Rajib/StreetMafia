@@ -48,6 +48,7 @@
                 top: 0;
             }
 
+            // main dropdown menu
             .nav-bar-menu {
                 position: relative;
                 z-index: 999;
@@ -57,20 +58,26 @@
                 }
 
                 .menu-wrap {
+                    padding: 0 8px;
                     display: flex;
+                    justify-content: space-between;
 
                     .nav-pill {
                         position: relative;
+                        padding-bottom: 3px;
 
                         .nav-btn {
                             font-weight: bold;
                             color: #000;
-                            text-decoration: none;
-                            display: block;
-                            padding: 10px 16px;
+                            display: flex;
+                            align-items: center;
+                            padding: 7px 16px;
                             margin: 0;
                             border-radius: 0.7em;
 
+                            img {
+                                margin-right: 3px;
+                            }
                         }
 
                         ul {
@@ -78,6 +85,27 @@
                             position: absolute;
                             left: 0;
                             top: 100%;
+                            width: auto;
+                            background: #0d0d0d;
+                            border: solid 1px #000;
+                            border-radius: 5px;
+                            border-bottom: 5px solid #510805;
+
+                            li {
+                                a {
+                                    display: block;
+                                    padding: 8px 30px 8px 16px;
+                                    text-wrap: nowrap;
+                                    color: #ffffff;
+                                    font-weight: normal;
+                                    width: 150px;
+
+                                    &:hover {
+                                        background: #510805 url(./../images/muisover.png) no-repeat right center !important;
+                                        color: #fff !important;
+                                    }
+                                }
+                            }
                         }
 
                         &.active {
@@ -114,6 +142,81 @@
                 }
 
 
+            }
+
+            // contents nav
+            .content-nav {
+                display: flex;
+
+                .pill {
+                    position: relative;
+
+                    a {
+                        padding: 10px;
+                        color: #625e5f;
+                        font: 11px Arial, Helvetica, sans-serif;
+                        text-decoration: none;
+                        display: block;
+                        float: left;
+                    }
+
+                    &.active {
+                        background: #f8f6f5;
+                        border: 1px solid #d6d6d6;
+                        border-bottom-color: #00000000;
+
+                        &::after {
+                            content: "";
+                            left: 0;
+                            top: 100%;
+                            width: 100%;
+                            height: 2px;
+                            position: absolute;
+                            background: #f8f6f5;
+                        }
+
+                        &:hover {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border-bottom: 1px solid #5f0300
+                    }
+
+                }
+            }
+
+            // inner wrap
+            .inner-wrapper {
+                background-color: #f8f6f5;
+                border: 1px solid #d6d6d6;
+                padding: 10px;
+
+                .battery {
+                    border: 1px solid #d8d8d8;
+                    padding: 12px;
+                    background-color: #ececec;
+
+                    p {
+                        color: #444444;
+                    }
+                }
+
+
+                .table {
+                    .table-borderless {
+                        td {
+                            padding: 2px;
+                        }
+                    }
+                }
+
+                table>:not(caption)>*>* {
+                    padding: 1px 8px;
+                }
             }
         }
     }

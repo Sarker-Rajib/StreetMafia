@@ -109,6 +109,11 @@ body {
   text-shadow: #000 1px 1px;
 }
 
+.ca-border {
+  height: 12px;
+  background: url(../images/prikkeldraad.png) top left;
+}
+
 /*===// end of base css === */
 /*=== layouts css start === */
 /*===// end of layouts css === */
@@ -166,25 +171,48 @@ body {
   padding: 0;
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap {
+  padding: 0 8px;
   display: flex;
+  justify-content: space-between;
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill {
   position: relative;
+  padding-bottom: 3px;
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill .nav-btn {
   font-weight: bold;
   color: #000;
-  text-decoration: none;
-  display: block;
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  padding: 7px 16px;
   margin: 0;
   border-radius: 0.7em;
+}
+.all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill .nav-btn img {
+  margin-right: 3px;
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill ul {
   display: none;
   position: absolute;
   left: 0;
   top: 100%;
+  width: auto;
+  background: #0d0d0d;
+  border: solid 1px #000;
+  border-radius: 5px;
+  border-bottom: 5px solid #510805;
+}
+.all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill ul li a {
+  display: block;
+  padding: 8px 30px 8px 16px;
+  text-wrap: nowrap;
+  color: #ffffff;
+  font-weight: normal;
+  width: 150px;
+}
+.all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill ul li a:hover {
+  background: #510805 url(./../images/muisover.png) no-repeat right center !important;
+  color: #fff !important;
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill.active .nav-btn {
   background-color: #1f1f1f;
@@ -203,4 +231,57 @@ body {
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap a {
   font-size: 11px;
+}
+.all-wrapper .inner-contents-body .contents .content-nav {
+  display: flex;
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill {
+  position: relative;
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill a {
+  padding: 10px;
+  color: #625e5f;
+  font: 11px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: block;
+  float: left;
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill.active {
+  background: #f8f6f5;
+  border: 1px solid #d6d6d6;
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill.active::after {
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background: #f8f6f5;
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill.active:hover::after {
+  display: none;
+}
+.all-wrapper .inner-contents-body .contents .content-nav .pill:hover {
+  border-bottom: 1px solid #5f0300;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper {
+  background-color: #f8f6f5;
+  border: 1px solid #d6d6d6;
+  padding: 10px;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper .battery {
+  border: 1px solid #d8d8d8;
+  padding: 12px;
+  background-color: #ececec;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper .battery p {
+  color: #444444;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper .table .table-borderless td {
+  padding: 2px;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper table > :not(caption) > * > * {
+  padding: 1px 8px;
 }/*# sourceMappingURL=style.css.map */
