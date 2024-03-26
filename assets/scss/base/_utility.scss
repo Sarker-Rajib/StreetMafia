@@ -80,6 +80,20 @@
    }
 }
 
+.title-text {
+   padding-top: 5px;
+   font-family: 'CavierDream';
+   color: #444;
+   font-size: 20px;
+   line-height: 26px;
+   letter-spacing: 1.2px;
+   font-weight: bold;
+
+   span {
+      color: #820500;
+   }
+}
+
 .ca-border {
    height: 12px;
    background: url(../images/prikkeldraad.png) top left;

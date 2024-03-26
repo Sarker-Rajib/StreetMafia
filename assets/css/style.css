@@ -1,4 +1,9 @@
 /*=== abstracts css start === */
+@font-face {
+  font-family: "CavierDream";
+  src: url("../fonts/CaviarDreams.ttf");
+  font-style: normal;
+}
 /*===// end of abstracts css === */
 /*=== base css start === */
 * {
@@ -107,6 +112,19 @@ body {
   font-size: 11px;
   padding-left: 5px;
   text-shadow: #000 1px 1px;
+}
+
+.title-text {
+  padding-top: 5px;
+  font-family: "CavierDream";
+  color: #444;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+.title-text span {
+  color: #820500;
 }
 
 .ca-border {
