@@ -18,8 +18,8 @@
         align-items: start;
 
         .left-menu {
-            min-width: 200px;
-            max-width: 200px;
+            min-width: 201px;
+            max-width: 201px;
 
             .name {
                 padding: 10px 15px 15px 10px;
@@ -36,8 +36,8 @@
 
         .contents {
             margin-top: -10px;
-            min-width: 800px;
-            max-width: 800px;
+            min-width: 799px;
+            max-width: 799px;
             background: #ffffff;
             padding: 10px;
             background: url(../images/content-achtergrond-light.png);
@@ -182,6 +182,13 @@
                         }
                     }
 
+                    &.red-bold {
+                        a {
+                            color: #ff0000;
+                            font-weight: bold;
+                        }
+                    }
+
                     &:hover {
                         border-bottom: 1px solid #5f0300
                     }
@@ -205,19 +212,27 @@
                     }
                 }
 
-
-                .table {
-                    .table-borderless {
-                        td {
-                            padding: 2px;
-                        }
-                    }
-                }
-
                 table>:not(caption)>*>* {
                     padding: 1px 8px;
                 }
+
+                .table.prize-table>:not(caption)>*>* {
+                    padding: 5px;
+                }
+
+                .content-row {
+                    p {
+                        color: #444444;
+                    }
+                }
+
             }
+        }
+    }
+
+    .footer {
+        .text {
+            margin-top: -30px;
         }
     }
 }

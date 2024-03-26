@@ -27,7 +27,7 @@ a, a:hover {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url(../images/achtergrond.jpg) no-repeat bottom center/cover;
+  background: url(../images/achtergrond.jpg) no-repeat bottom center/cover fixed;
 }
 
 .fz-10 {
@@ -114,6 +114,21 @@ body {
   background: url(../images/prikkeldraad.png) top left;
 }
 
+.color-ash {
+  color: #444444;
+}
+
+.list-link {
+  text-decoration: underline;
+  color: #ce3824;
+  font-size: 11px;
+  transition: all 0.3s;
+}
+.list-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 /*===// end of base css === */
 /*=== layouts css start === */
 /*===// end of layouts css === */
@@ -137,8 +152,8 @@ body {
   align-items: start;
 }
 .all-wrapper .inner-contents-body .left-menu {
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 201px;
+  max-width: 201px;
 }
 .all-wrapper .inner-contents-body .left-menu .name {
   padding: 10px 15px 15px 10px;
@@ -152,8 +167,8 @@ body {
 }
 .all-wrapper .inner-contents-body .contents {
   margin-top: -10px;
-  min-width: 800px;
-  max-width: 800px;
+  min-width: 799px;
+  max-width: 799px;
   background: #ffffff;
   padding: 10px;
   background: url(../images/content-achtergrond-light.png);
@@ -263,6 +278,10 @@ body {
 .all-wrapper .inner-contents-body .contents .content-nav .pill.active:hover::after {
   display: none;
 }
+.all-wrapper .inner-contents-body .contents .content-nav .pill.red-bold a {
+  color: #ff0000;
+  font-weight: bold;
+}
 .all-wrapper .inner-contents-body .contents .content-nav .pill:hover {
   border-bottom: 1px solid #5f0300;
 }
@@ -279,9 +298,15 @@ body {
 .all-wrapper .inner-contents-body .contents .inner-wrapper .battery p {
   color: #444444;
 }
-.all-wrapper .inner-contents-body .contents .inner-wrapper .table .table-borderless td {
-  padding: 2px;
-}
 .all-wrapper .inner-contents-body .contents .inner-wrapper table > :not(caption) > * > * {
   padding: 1px 8px;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper .table.prize-table > :not(caption) > * > * {
+  padding: 5px;
+}
+.all-wrapper .inner-contents-body .contents .inner-wrapper .content-row p {
+  color: #444444;
+}
+.all-wrapper .footer .text {
+  margin-top: -30px;
 }/*# sourceMappingURL=style.css.map */
