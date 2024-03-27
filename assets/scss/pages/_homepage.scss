@@ -301,6 +301,18 @@
     }
 
     .footer {
+        .big-screen {
+            @media(max-width: 999px) {
+                display: none;
+            }
+        }
+
+        .small-screen {
+            @media(min-width: 1000px) {
+                display: none;
+            }
+        }
+
         .text {
             margin-top: -30px;
         }

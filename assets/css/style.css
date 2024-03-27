@@ -455,6 +455,16 @@ body {
 .all-wrapper .inner-contents-body .contents .inner-wrapper .content-row p {
   color: #444444;
 }
+@media (max-width: 999px) {
+  .all-wrapper .footer .big-screen {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .all-wrapper .footer .small-screen {
+    display: none;
+  }
+}
 .all-wrapper .footer .text {
   margin-top: -30px;
 }/*# sourceMappingURL=style.css.map */
