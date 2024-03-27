@@ -25,13 +25,11 @@ document.getElementById("dropMenuCloser").addEventListener('click', () => {
 })
 
 const navPills = document.querySelectorAll(".nav-pill");
-navPills.forEach(navPill => {
+navPills.forEach((navPill, i) => {
     navPill.addEventListener("click", function () {
-        this.classList.remove("collapsed");
-
         navPills.forEach(pill => {
             pill.classList.add("collapsed");
         });
-
+        this.classList.remove("collapsed");
     });
 });
