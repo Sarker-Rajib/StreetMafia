@@ -20,7 +20,6 @@ document.getElementById("dropMenutrigger").addEventListener('click', () => {
     document.getElementById("navMenu").classList.add('show')
 })
 
-
 document.getElementById("dropMenuCloser").addEventListener('click', () => {
     document.getElementById("navMenu").classList.remove('show')
 })
@@ -28,10 +27,11 @@ document.getElementById("dropMenuCloser").addEventListener('click', () => {
 const navPills = document.querySelectorAll(".nav-pill");
 navPills.forEach(navPill => {
     navPill.addEventListener("click", function () {
+        this.classList.remove("collapsed");
+
         navPills.forEach(pill => {
             pill.classList.add("collapsed");
         });
 
-        this.classList.remove("collapsed");
     });
 });
