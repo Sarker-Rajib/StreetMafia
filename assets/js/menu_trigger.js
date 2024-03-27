@@ -24,3 +24,14 @@ document.getElementById("dropMenutrigger").addEventListener('click', () => {
 document.getElementById("dropMenuCloser").addEventListener('click', () => {
     document.getElementById("navMenu").classList.remove('show')
 })
+
+const navPills = document.querySelectorAll(".nav-pill");
+navPills.forEach(navPill => {
+    navPill.addEventListener("click", function () {
+        navPills.forEach(pill => {
+            pill.classList.add("collapsed");
+        });
+
+        this.classList.remove("collapsed");
+    });
+});

@@ -2,7 +2,7 @@
     min-height: 100vh;
     max-width: 1000px;
     margin: auto;
-    overflow: hidden;
+    // overflow: hidden;
 
 
     .header-top {
@@ -130,34 +130,33 @@
                         padding-bottom: 3px;
 
                         .nav-btn {
+                            font-size: 11px;
                             font-weight: bold;
                             color: #000;
                             display: flex;
                             align-items: center;
                             padding: 7px 16px;
                             margin: 0;
-                            border-radius: 0.7em;
+                            border-radius: 8px;
+                            cursor: pointer;
 
                             img {
                                 margin-right: 3px;
                             }
+
+                            @media(max-width: 999px) {
+                                margin-bottom: 2px;
+                            }
                         }
 
                         ul {
-                            display: none;
+                            height: 0;
                             position: absolute;
                             left: 0;
                             top: 100%;
                             width: auto;
                             background: #0d0d0d;
-                            border: solid 1px #000;
-                            border-radius: 5px;
-                            border-bottom: 5px solid #510805;
-
-                            @media(max-width: 999px) {
-                                display: block;
-                                position: relative;
-                            }
+                            overflow: hidden;
 
                             li {
                                 a {
@@ -180,17 +179,29 @@
                             }
                         }
 
+                        @media(max-width:999px) {
+                            ul {
+                                height: auto;
+                                position: relative;
+                                border: solid 1px #000;
+                                border-radius: 5px;
+                                border-bottom: 5px solid #510805;
+                            }
+
+                            &.collapsed {
+                                ul {
+                                    height: 0;
+                                    border: 0;
+                                }
+                            }
+                        }
+
                         &.active {
                             .nav-btn {
                                 background-color: #1f1f1f;
                                 color: #FFF;
                                 border-top: solid 1px #f8f8f8;
-                                text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
-
-
-                                @media(max-width: 999px) {
-                                    margin-bottom: 2px;
-                                }
+                                text-shadow: 0 1px 0 #000000;
                             }
                         }
 
@@ -203,7 +214,14 @@
                             }
 
                             ul {
-                                display: block;
+                                height: auto;
+                                border: solid 1px #000;
+                                border-radius: 5px;
+                                border-bottom: 5px solid #510805;
+
+                                @media(max-width: 999px) {
+                                    position: relative;
+                                }
                             }
                         }
                     }
@@ -306,6 +324,8 @@
     }
 
     .footer {
+        overflow: hidden;
+
         .big-screen {
             @media(max-width: 999px) {
                 display: none;
