@@ -211,6 +211,7 @@ body {
 @media (max-width: 560px) {
   .all-wrapper .header-top .brand-icon {
     width: 320px;
+    z-index: 99;
   }
 }
 @media (max-width: 450px) {
@@ -296,7 +297,7 @@ body {
     right: -202px;
     top: 0;
     height: 100vh;
-    background: #fff;
+    background: #ececec;
     width: 200px;
     overflow-y: scroll;
     padding-bottom: 50px;
@@ -365,6 +366,11 @@ body {
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill ul li a:hover {
   background: #510805 url(./../images/muisover.png) no-repeat right center !important;
   color: #fff !important;
+}
+@media (max-width: 999px) {
+  .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill ul li a {
+    width: auto;
+  }
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu .menu-wrap .nav-pill.active .nav-btn {
   background-color: #1f1f1f;
