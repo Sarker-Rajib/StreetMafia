@@ -11,3 +11,9 @@
     background: #780b0b;
     margin-bottom: 10px;
 }
+
+.trigger {
+    @media(min-width: 1000px) {
+        display: none;
+    }
+}

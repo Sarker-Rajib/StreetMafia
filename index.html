@@ -13,8 +13,9 @@
 </head>
 
 <body>
+  <div class="check"></div>
   <main class="all-wrapper">
-    <!-- all codes for ===***top***=== starts from here -->
+    <!-- all codes for -- top -- starts from here -->
     <section class="top position-relative">
       <div class="position-absolute top-0 end-0 time d-flex justify-content-end pt-1 px-2">
         <ul class="d-flex p-0">
@@ -26,7 +27,15 @@
       </div>
 
       <div class="header-top">
-        <img src="assets/images/header.png" alt="brand logo" class="img-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+          <img src="assets/images/header.png" alt="brand logo" class="brand-icon img-fluid">
+          <div>
+            <button id="statTrigger" class="btn bg-black py-1 trigger me-2"
+              style="border:1px solid #848484; z-index: 99;">
+              <img width="40" src="assets/images/menu-svgrepo-com.svg" alt="menu">
+            </button>
+          </div>
+        </div>
         <div class="separator"></div>
       </div>
     </section>
@@ -34,7 +43,12 @@
 
     <!-- all codes for ===***inner-contents-body***=== starts from here -->
     <section class="inner-contents-body bg-black">
-      <div class="left-menu">
+      <div class="left-menu" id="stats">
+        <!-- closer -->
+        <div class="text-end px-2 sticky-top w-100 bg-black trigger">
+          <span id="statCloser" class="text-light d-inline-block px-2" style="cursor: pointer;">X</span>
+        </div>
+        <!--  -->
         <div style="padding: 8px 14px 6px 8px;">
           <h4 class="fz-18 color-yellow font-shadow" style="font-weight: bold;">Level 29
             <span class="fz-12 text-light font-bold">
@@ -222,9 +236,12 @@
       <!-- main contents  -->
       <div class="right contents position-relative">
         <div class="pt-1"></div>
-        <img class="shade img-fluid" src="assets/images/shade1.png" alt="sha">
+        <img class="shade" src="assets/images/shade1.png" alt="sha">
         <!-- main dropdown menu -->
-        <div class="nav-bar-menu">
+        <div class="nav-bar-menu" id="navMenu">
+          <div class="px-2 sticky-top w-100 bg-light trigger">
+            <span id="dropMenuCloser" class="text-dark d-inline-block px-2" style="cursor: pointer;">X</span>
+          </div>
           <ul class="menu-wrap">
             <li class="active nav-pill">
               <a href="#" class="nav-btn"><img src="./assets/images/algemeen.png" alt="">Algemeen</a>
@@ -315,7 +332,10 @@
         </div>
 
         <!-- contents body -->
-        <div class="p-3 pt-4">
+        <div class="p-3 pt-lg-4">
+          <div class="text-end trigger">
+            <button style="position: relative; z-index: 99;" class="btn btn-red" id="dropMenutrigger">Open Menu</button>
+          </div>
           <!-- second menu -->
           <ul class="p-0 content-nav">
             <li class="pill active"><a href="#">Overzicht</a></li>
@@ -805,11 +825,8 @@
         </div>
       </div>
     </footer>
+    <!-- - -->
   </main>
-
-
-
-
 
   <!-- all scripts are starts from here -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -848,7 +865,7 @@
           spaceBetween: 30
         },
         // when window width is >= 640px
-        1000: {
+        768: {
           slidesPerView: 5,
           spaceBetween: 40
         }
