@@ -48,7 +48,7 @@
                 overflow-y: scroll;
                 border-right: 1px solid #5f0300;
                 transition: all 0.3s;
-                padding-bottom: 50px;
+                padding-bottom: 65px;
 
                 &.show {
                     left: 0;
@@ -102,7 +102,7 @@
                     background: #ececec;
                     width: 200px;
                     overflow-y: scroll;
-                    padding-bottom: 50px;
+                    padding-bottom: 65px;
                     transition: all 0.3s;
                     border-left: 1px solid#000;
                     z-index: 999;
