@@ -216,6 +216,11 @@ body {
   min-width: 201px;
   max-width: 201px;
 }
+@media (max-width: 999px) {
+  .all-wrapper .inner-contents-body .left-menu {
+    display: none;
+  }
+}
 .all-wrapper .inner-contents-body .left-menu .name {
   padding: 10px 15px 15px 10px;
   background: url(../images/bg_naam.png) no-repeat left center;
@@ -234,6 +239,12 @@ body {
   padding: 10px;
   background: url(../images/content-achtergrond-light.png);
 }
+@media (max-width: 999px) {
+  .all-wrapper .inner-contents-body .contents {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
 .all-wrapper .inner-contents-body .contents .shade {
   position: absolute;
   left: 0;
@@ -242,6 +253,11 @@ body {
 .all-wrapper .inner-contents-body .contents .nav-bar-menu {
   position: relative;
   z-index: 999;
+}
+@media (max-width: 999px) {
+  .all-wrapper .inner-contents-body .contents .nav-bar-menu {
+    display: none;
+  }
 }
 .all-wrapper .inner-contents-body .contents .nav-bar-menu ul {
   padding: 0;
@@ -311,16 +327,22 @@ body {
 .all-wrapper .inner-contents-body .contents .content-nav {
   display: flex;
 }
+@media (max-width: 999px) {
+  .all-wrapper .inner-contents-body .contents .content-nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
 .all-wrapper .inner-contents-body .contents .content-nav .pill {
   position: relative;
 }
 .all-wrapper .inner-contents-body .contents .content-nav .pill a {
   padding: 10px;
   color: #625e5f;
-  font: 11px Arial, Helvetica, sans-serif;
+  font-size: 11px;
   text-decoration: none;
   display: block;
-  float: left;
+  white-space: nowrap;
 }
 .all-wrapper .inner-contents-body .contents .content-nav .pill.active {
   background: #f8f6f5;
