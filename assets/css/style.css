@@ -265,6 +265,15 @@ body {
   height: 160px;
   border-radius: 10px;
 }
+.all-wrapper .inner-contents-body .left-menu .l-stats a {
+  display: block;
+  font-size: 11px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+.all-wrapper .inner-contents-body .left-menu .l-stats a:hover {
+  color: #ff0800;
+}
 .all-wrapper .inner-contents-body .contents {
   margin-top: -10px;
   min-width: 799px;
@@ -272,12 +281,14 @@ body {
   background: #ffffff;
   padding: 10px;
   background: url(../images/content-achtergrond-light.png);
+  min-height: 700px;
 }
 @media (max-width: 999px) {
   .all-wrapper .inner-contents-body .contents {
     min-width: 100%;
     max-width: 100%;
     background-size: 100%;
+    min-height: auto;
   }
 }
 .all-wrapper .inner-contents-body .contents .shade {
